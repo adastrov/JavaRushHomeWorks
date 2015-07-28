@@ -7,27 +7,27 @@ package com.javarush.test.level19.lesson03.task02;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-public class AdapterFileOutputStream implements AmigoStringWriter {
+public class AdapterFileOutputStream implements AmigoStringWriter{
 
-    private FileOutputStream out;
+    private FileOutputStream outputStream;
 
-    public AdapterFileOutputStream(FileOutputStream out) {
-        this.out = out;
+    public AdapterFileOutputStream(FileOutputStream outputStream) {
+        this.outputStream = outputStream;
     }
 
     @Override
     public void flush() throws IOException {
-        this.out.flush();
+        this.outputStream.flush();
     }
 
     @Override
     public void writeString(String s) throws IOException {
-        this.out.write(s.getBytes());
+        this.outputStream.write(s.getBytes());
     }
 
     @Override
     public void close() throws IOException {
-        this.out.close();
+        this.outputStream.close();
     }
 }
 
