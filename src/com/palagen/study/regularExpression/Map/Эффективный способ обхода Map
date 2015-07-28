@@ -1,0 +1,7 @@
+            String res = "";
+            String country = customer.getCountryName();
+            for (Map.Entry<String,String> x : countries.entrySet())
+            {
+                if (x.getValue().equals(country)) res = x.getKey();
+            }
+            return res;
