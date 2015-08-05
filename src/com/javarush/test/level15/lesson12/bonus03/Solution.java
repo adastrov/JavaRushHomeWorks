@@ -29,7 +29,10 @@ public class Solution {
         if (n == 0) return "1";
         else {
             BigInteger ret = BigInteger.ONE;
-            for (int i = 1; i <= n; ++i) ret = ret.multiply(BigInteger.valueOf(i));
+            for (int i = 1; i <= n; ++i)
+
+                ret = ret.multiply(BigInteger.valueOf(i));
+
             return ret.toString();
         }
     }
