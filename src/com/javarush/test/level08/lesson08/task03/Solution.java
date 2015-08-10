@@ -11,65 +11,41 @@ import java.util.Map;
 
 public class Solution
 {
-
-    public static void main(String[] args)
-    {
-        HashMap<String, String> map = createMap();
-        map.put("Padalka", "Pavel");
-        map.put("Filoncev", "Pavel");
-        map.put("Romanesku", "Igor");
-        map.put("Padalka", "Pavel");
-        map.put("Padalka", "Pavel");
-        map.put("Borisenko", "Pavel");
-        map.put("Padalka", "Pavel");
-        map.put("Padalka", "Ivan");
-        map.put("Padalka", "Roman");
-        map.put("Padalka", "Sergey");
-
-        int result1 = getCountTheSameFirstName(map, "Pavel");
-        int result2 = getCountTheSameLastName(map,  "Padalka");
-
-        System.out.println(result1);
-        System.out.println(result2);
-
-    }
-
     public static HashMap<String, String> createMap()
     {
-        HashMap<String, String> map = new HashMap<String, String>();
-
-        return map;
+        Map<String, String> map = new HashMap<String,String>();
+        map.put("Ivanov", "Ivan");
+        map.put("Petrov", "Petr");
+        map.put("Herov", "Her");
+        map.put("Dul'kin", "Dula");
+        map.put("Petin", "Afanasiy");
+        map.put("Sidorov", "Semen");
+        map.put("Pen", "Semen");
+        map.put("Nosin", "Napoleon");
+        map.put("PUtin", "Semen");
+        map.put("Cherezzabornogyzaderi", "Petr");
+        return (HashMap<String, String>) map;
     }
 
     public static int getCountTheSameFirstName(HashMap<String, String> map, String name)
     {
-
-        int count = 0;
-
-        for (Map.Entry<String, String> pair : map.entrySet())
+        int count =0;
+        for (Map.Entry<String,String> pair: map.entrySet())
         {
             if (pair.getValue().equals(name))
-            {
                 count++;
-            }
         }
-
         return count;
-
     }
 
     public static int getCountTheSameLastName(HashMap<String, String> map, String familiya)
     {
-        int count = 0;
-
-        for (Map.Entry<String, String> pair : map.entrySet())
+        int count =0;
+        for (Map.Entry<String,String> pair: map.entrySet())
         {
             if (pair.getKey().equals(familiya))
-            {
                 count++;
-            }
         }
-
         return count;
     }
 }
